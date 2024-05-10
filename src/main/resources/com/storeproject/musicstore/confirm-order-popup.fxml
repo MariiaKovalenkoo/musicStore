@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="150.0" prefWidth="250.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.storeproject.musicstore.ConfirmOrderPopUpController">
+   <stylesheets>
+      <URL value="@style.css" />
+   </stylesheets>
+   <Label alignment="CENTER" layoutY="25.0" prefHeight="17.0" prefWidth="300.0" text="Create an order?" textFill="LIME">
+      <font>
+         <Font size="18.0" />
+      </font></Label>
+   <Button fx:id="createOrderButton" layoutX="63.0" layoutY="88.0" mnemonicParsing="false" onAction="#confirmOrder" style="-fx-background-color: lime;" text="Confirm" />
+   <Button fx:id="cancelOrderButton" layoutX="183.0" layoutY="88.0" mnemonicParsing="false" onAction="#cancelOrderOnClick" style="-fx-background-color: lime;" text="Cancel" />
+   <Label fx:id="errorLabel" alignment="CENTER" layoutX="-1.0" layoutY="58.0" prefHeight="17.0" prefWidth="300.0" textFill="RED">
+      <font>
+         <Font size="13.0" />
+      </font></Label>
+</AnchorPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="550.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.storeproject.musicstore.AddProductPopupController">
+   <stylesheets>
+      <URL value="@style.css" />
+   </stylesheets>
+   <HBox prefHeight="31.0" prefWidth="550.0">
+      <children>
+         <Label alignment="CENTER" prefHeight="27.0" prefWidth="258.0" text="Select a product" textFill="LIME">
+            <font>
+               <Font size="14.0" />
+            </font>
+            <padding>
+               <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+            </padding>
+         </Label>
+         <Label fx:id="errorAddlabel" alignment="CENTER" prefHeight="26.0" prefWidth="272.0" textFill="RED" />
+      </children>
+   </HBox>
+   <HBox prefHeight="38.0" prefWidth="550.0" spacing="20.0">
+      <padding>
+         <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+      </padding>
+      <children>
+         <Label text="Search:" textFill="LIME">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <TextField fx:id="productSearchField" promptText="enter the product name" />
+      </children>
+   </HBox>
+   <TableView fx:id="productInventoryView" prefHeight="240.0" prefWidth="550.0">
+      <columns>
+         <TableColumn fx:id="stockColumn" prefWidth="60.0" text="Stock" />
+         <TableColumn fx:id="nameColumn" prefWidth="150.0" text="Name" />
+         <TableColumn fx:id="categoryColumn" prefWidth="90.0" text="Category" />
+         <TableColumn fx:id="priceColumn" prefWidth="60.0" text="Price" />
+         <TableColumn fx:id="descriptionColumn" prefWidth="170.0" text="Description" />
+      </columns>
+      <VBox.margin>
+         <Insets bottom="5.0" left="10.0" right="10.0" />
+      </VBox.margin>
+   </TableView>
+   <HBox prefHeight="56.0" prefWidth="550.0" spacing="20.0">
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <padding>
+         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+      </padding>
+      <Label prefHeight="20.0" prefWidth="55.0" text="Quantity:" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="productQuantityField" promptText="enter the number" />
+      <Button fx:id="addToOrderButton" mnemonicParsing="false" onAction="#addToOrder" style="-fx-background-color: lime;" text="Add to order" />
+      <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelAdding" style="-fx-background-color: lime;" text="Cancel" />
+   </HBox>
+</VBox>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="450.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.storeproject.musicstore.DashboardController">
+   <stylesheets>
+      <URL value="@style.css" />
+   </stylesheets>
+   <Label fx:id="welcomeLabel" layoutX="42.0" layoutY="28.0" textFill="WHITE" />
+   <Label fx:id="roleLabel" layoutX="42.0" layoutY="66.0" textFill="WHITE" />
+   <Label fx:id="dateTimeLabel" layoutX="42.0" layoutY="107.0" textFill="WHITE" />
+   <Label fx:id="errorLabel" layoutX="69.0" layoutY="147.0" textFill="RED" />
+</AnchorPane>

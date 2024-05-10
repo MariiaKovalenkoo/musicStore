@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.storeproject.musicstore.LoginController">
+   <stylesheets>
+      <URL value="@style.css" />
+   </stylesheets>
+   <Label alignment="CENTER" prefHeight="54.0" prefWidth="350.0" text="Welcome to the Music Store!" textFill="WHITE">
+      <font>
+         <Font size="20.0" />
+      </font>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+      <VBox.margin>
+         <Insets top="10.0" />
+      </VBox.margin>
+   </Label>
+   <HBox prefHeight="190.0" prefWidth="350.0">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <ImageView fitHeight="148.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@images/guitar.png" />
+      </ImageView>
+      <AnchorPane prefHeight="169.0" prefWidth="237.0">
+         <Label layoutX="12.0" layoutY="28.0" text="username" textFill="WHITE" />
+         <Label layoutX="14.0" layoutY="65.0" text="password" textFill="WHITE" />
+         <TextField fx:id="usernameTextField" layoutX="79.0" layoutY="25.0" />
+         <PasswordField fx:id="passwordField" layoutX="79.0" layoutY="62.0" onKeyTyped="#onPasswordTextChange" />
+         <Label fx:id="loginErrorMessage" alignment="CENTER" layoutY="84.0" prefHeight="35.0" prefWidth="249.0" textFill="#f43333" />
+         <Button fx:id="loginButton" layoutX="96.0" layoutY="119.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: lime;" text="login" />
+      </AnchorPane>
+   </HBox>
+</VBox>

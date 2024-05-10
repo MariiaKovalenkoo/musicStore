@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainViewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.storeproject.musicstore.MainController">
+   <stylesheets>
+      <URL value="@style.css" />
+   </stylesheets>
+   <left>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="150.0" spacing="50.0" style="-fx-background-color: lime;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <Label fx:id="errorMainView" alignment="CENTER" prefHeight="29.0" prefWidth="150.0" textFill="#ff0101" wrapText="true" />
+         <Button fx:id="dashboardButton" mnemonicParsing="false" onAction="#showDashboard" style="-fx-background-color: black;" text="Dashboard" textFill="WHITE" />
+         <Button fx:id="createOrderButton" mnemonicParsing="false" onAction="#showCreateOrder" style="-fx-background-color: black;" text="Create Order" textFill="WHITE" />
+         <Button fx:id="productInventoryButton" mnemonicParsing="false" onAction="#showProductInventory" style="-fx-background-color: black;" text="Product Inventory" textFill="WHITE" />
+         <Button fx:id="orderHistoryButton" mnemonicParsing="false" onAction="#showOrderHistory" style="-fx-background-color: black;" text="Order History" textFill="WHITE" />
+      </VBox>
+   </left>
+</BorderPane>

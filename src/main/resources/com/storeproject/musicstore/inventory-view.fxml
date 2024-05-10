@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="450.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.storeproject.musicstore.ProductInventoryController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+   <HBox prefHeight="31.0" prefWidth="450.0">
+      <children>
+          <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="31.0" prefWidth="239.0" text="Product inventory" textAlignment="CENTER" textFill="LIME">
+              <font>
+                  <Font size="16.0" />
+              </font>
+          </Label>
+           <Label fx:id="errorLabel" alignment="CENTER" prefHeight="29.0" prefWidth="195.0" textFill="RED" />
+      </children>
+   </HBox>
+    <TableView fx:id="productInventoryView" prefHeight="317.0" prefWidth="450.0">
+        <columns>
+            <TableColumn fx:id="stockColumn" prefWidth="45.0" text="Stock" />
+            <TableColumn fx:id="nameColumn" prefWidth="140.0" text="Name" />
+            <TableColumn fx:id="categoryColumn" prefWidth="75.0" text="Category" />
+            <TableColumn fx:id="priceColumn" prefWidth="45.0" text="Price" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="140.0" text="Description" />
+        </columns>
+        <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+        </VBox.margin>
+    </TableView>
+    <HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="450.0" spacing="15.0">
+        <Button fx:id="buttonAddProduct" mnemonicParsing="false" onAction="#addProductOnClick" style="-fx-background-color: lime;" text="Add product" />
+        <Button fx:id="buttonEditProduct" mnemonicParsing="false" onAction="#editProductOnClick" style="-fx-background-color: lime;" text="Edit product" />
+        <Button fx:id="buttonDeleteProduct" mnemonicParsing="false" onAction="#deleteProductOnClick" style="-fx-background-color: lime;" text="Delete product" />
+      <Button fx:id="importProductsButton" mnemonicParsing="false" onAction="#importProductsOnClick" prefHeight="22.0" prefWidth="111.0" style="-fx-background-color: lime;" text="Import products" />
+        <VBox.margin>
+            <Insets />
+        </VBox.margin>
+        <padding>
+            <Insets bottom="5.0" left="20.0" right="10.0" top="5.0" />
+        </padding>
+    </HBox>
+</VBox>

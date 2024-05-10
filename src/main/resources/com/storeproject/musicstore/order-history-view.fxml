@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="450.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.storeproject.musicstore.OrderHistoryController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+    <Label alignment="CENTER" prefHeight="14.0" prefWidth="436.0" text="Order history" textFill="LIME" />
+    <TableView fx:id="orderHistoryView" prefHeight="200.0" prefWidth="200.0">
+      <columns>
+          <TableColumn fx:id="dateTimeColumn" minWidth="30.0" prefWidth="120.0" text="Date/time" />
+          <TableColumn fx:id="customerNameColumn" minWidth="150.0" prefWidth="200.0" text="Name" />
+          <TableColumn fx:id="totalPriceColumn" text="Total price" />
+      </columns>
+      <VBox.margin>
+         <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+      </VBox.margin>
+    </TableView>
+   <HBox prefHeight="43.0" prefWidth="439.0">
+      <children>
+          <Label alignment="CENTER" prefHeight="14.0" prefWidth="171.0" text="Ordered products" textFill="LIME" />
+         <Label fx:id="errorLabel" prefHeight="14.0" prefWidth="265.0" textFill="RED" />
+      </children>
+   </HBox>
+    <TableView fx:id="orderedProductsView" prefHeight="200.0" prefWidth="200.0">
+      <columns>
+          <TableColumn fx:id="quantityColumn" prefWidth="75.0" text="Qunatity" />
+          <TableColumn fx:id="productNameColumn" prefWidth="150.0" text="Name" />
+          <TableColumn fx:id="categoryColumn" prefWidth="100.0" text="Category" />
+          <TableColumn fx:id="priceColumn" prefWidth="75.0" text="Price" />
+      </columns>
+      <VBox.margin>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="2.0" />
+      </VBox.margin>
+    </TableView>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>
